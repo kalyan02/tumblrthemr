@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!--
+* Theme:     Clarus
+* Author:    Benjamin Nathan
+* Website:   benjaminnathan.nl
+* Email:     benjamin@benjaminnathan.nl
+-->
+<title>Blog</title>
+<meta charset="utf-8"/>
+
+        
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta name='description' content='{MetaDescription}' />
+
+<meta name="if:Red Background" content="0"/>
+<meta name="if:Blue Background" content="0"/>
+<meta name="if:Smaller Nav For Pages" content="0" />
+<meta name="if:Hide Colored Top Bar" content="0" />
+<meta name="if:Hide Background Texture" content="0" />
+<meta name="if:Hide Date" content="0" />
+<meta name="if:Hide Tags" content="1" />
+<meta name="if:Hide Notes" content="0" />
+<meta name="if:Align Navigation With Description" content"0">
+<meta name="if:Infinite Scroll" content="0"/>
+<meta name="text:Google Analytics ID" content="">
+
+<meta name="if:Hide Social Button" content"0">
+<meta name="text:Disqus Account" content=""/>
+<meta name="text:Twitter" content=""/>
+<meta name="text:Facebook" content=""/>
+<meta name="text:Dribbble" content=""/>
+<meta name="text:Flickr" content=""/>
+<meta name="text:YouTube" content=""/>
+<meta name="text:Skype" content=""/>
+<meta name="text:Deviantart" content=""/>
+<meta name="text:Vimeo" content=""/>
+<meta name="text:Soundcloud" content=""/>
+<meta name="text:Behance" content=""/>
+<meta name="text:Foursquare" content=""/>
+<meta name="text:LastFM" content=""/>
+<meta name="text:Github" content=""/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300,600,700' rel='stylesheet' type='text/css'>
+
+<style type='text/css'>
+/* Base, Background*/
+html {
+min-height:100%;
+}
+body {
+-webkit-font-smoothing: antialiased;
+font: 1em 'Helvetica Neue', Helvetica;
+line-height:180%;
+color: rgba(255,255,255,0.8);
+margin:0 0 15px 0;
+
+background: rgb(5,23,51); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(5,23,51,1) 0%, rgba(30,93,112,1) 26%, rgba(45,142,139,1) 67%, rgba(168,224,193,1) 87%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(5,23,51,1)), color-stop(26%,rgba(30,93,112,1)), color-stop(67%,rgba(45,142,139,1)), color-stop(87%,rgba(168,224,193,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(5,23,51,1) 0%,rgba(30,93,112,1) 26%,rgba(45,142,139,1) 67%,rgba(168,224,193,1) 87%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(5,23,51,1) 0%,rgba(30,93,112,1) 26%,rgba(45,142,139,1) 67%,rgba(168,224,193,1) 87%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(5,23,51,1) 0%,rgba(30,93,112,1) 26%,rgba(45,142,139,1) 67%,rgba(168,224,193,1) 87%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(5,23,51,1) 0%,rgba(30,93,112,1) 26%,rgba(45,142,139,1) 67%,rgba(168,224,193,1) 87%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051733', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+{block:IfRedBackground}
+background: rgb(48,11,14); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(48,11,14,1) 0%, rgba(96,26,36,1) 26%, rgba(165,72,49,1) 66%, rgba(229,182,87,1) 86%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(48,11,14,1)), color-stop(26%,rgba(96,26,36,1)), color-stop(66%,rgba(165,72,49,1)), color-stop(86%,rgba(229,182,87,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(48,11,14,1) 0%,rgba(96,26,36,1) 26%,rgba(165,72,49,1) 66%,rgba(229,182,87,1) 86%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(48,11,14,1) 0%,rgba(96,26,36,1) 26%,rgba(165,72,49,1) 66%,rgba(229,182,87,1) 86%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(48,11,14,1) 0%,rgba(96,26,36,1) 26%,rgba(165,72,49,1) 66%,rgba(229,182,87,1) 86%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(48,11,14,1) 0%,rgba(96,26,36,1) 26%,rgba(165,72,49,1) 66%,rgba(229,182,87,1) 86%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#300b0e', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+{/block:IfRedBackground}
+
+{block:IfBlueBackground}
+background: rgb(13,33,53); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(13,33,53,1) 0%, rgba(16,55,107,1) 17%, rgba(0,88,132,1) 48%, rgba(74,157,197,1) 78%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(13,33,53,1)), color-stop(17%,rgba(16,55,107,1)), color-stop(48%,rgba(0,88,132,1)), color-stop(78%,rgba(74,157,197,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(13,33,53,1) 0%,rgba(16,55,107,1) 17%,rgba(0,88,132,1) 48%,rgba(74,157,197,1) 78%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(13,33,53,1) 0%,rgba(16,55,107,1) 17%,rgba(0,88,132,1) 48%,rgba(74,157,197,1) 78%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(13,33,53,1) 0%,rgba(16,55,107,1) 17%,rgba(0,88,132,1) 48%,rgba(74,157,197,1) 78%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(13,33,53,1) 0%,rgba(16,55,107,1) 17%,rgba(0,88,132,1) 48%,rgba(74,157,197,1) 78%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d2135', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+{/block:IfBlueBackground}
+
+background-size:100%;
+height:100%;
+text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+padding-bottom:220px;
+background-attachment:fixed;
+}
+
+a {
+text-decoration:none;
+color:{color:Link};
+}
+
+/* Fonts*/
+h1 {
+font-family: 'Open Sans', Helvetica;
+margin:0;
+padding:0 0 20px 0;
+font-size:2.2em;
+font-weight:700;
+letter-spacing:-1px;
+width:632px;
+margin:0 auto;
+color: rgba(255,255,255,1);
+
+}
+
+h1 a{
+color: rgba(255,255,255,1);
+}
+
+h3 {
+font-family: 'Helvetica Neue', Helvetica;
+font-weight:700;
+margin:0 0 30px 0;
+padding:0;
+font-size:1.7em;
+color: rgba(255,255,255,1);
+text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+}
+p {
+margin:10px 0;
+padding:0;
+}
+/* Space texture */
+#container{
+background: url('http://static.tumblr.com/nlywmlg/YHgm9rlsx/bg_pattern.png') repeat;
+}
+
+{Block:IfHideBackgroundTexture}
+#container{
+background:transparent;
+}
+{/Block:IfHideBackgroundTexture}
+
+/* Content*/
+#wrapper {
+position:relative;
+width:630px;
+margin:0 auto;
+}
+
+/* Nav */
+nav ul li a.ask{
+display:none;
+}
+nav ul li a.submit{
+display:none;
+}
+nav ul {
+float:right;
+margin-top:-47px;
+text-align:right;
+}
+nav ul li {
+list-style:none;
+margin-bottom:15px;
+}
+nav ul li a {
+text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+font-weight:600;
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+color: #fff;
+background:rgba(255,255,255,0.2);
+padding:5px 10px;
+border-radius: 44px;
+-webkit-border-radius: 44px;
+border: 2px solid rgba(255,255,255,0.5);
+box-shadow: 0px 1px 0px rgba(0,0,0,0.1);
+}
+nav ul li a:hover {
+background:rgba(255,255,255,0.4);
+}
+nav ul li a:active {
+background:rgba(255,255,255,0.2);
+}
+nav ul li a.current {
+background: rgba(234,195,102,0.6);
+border: 2px solid rgba(234,195,102,1);
+text-shadow: 0px -1px 0px rgba(0,0,0,0.6);
+}
+
+{Block:IfAlignNavigationWithDescription}
+nav ul {
+float:right;
+margin-top:10px;
+text-align:right;
+}
+nav ul li {
+list-style:none;
+margin-bottom:15px;
+}
+nav ul li a {
+text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+font-weight:600;
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+color: #fff;
+background:rgba(255,255,255,0.2);
+padding:5px 10px;
+border-radius: 44px;
+-webkit-border-radius: 44px;
+border: 2px solid rgba(255,255,255,0.5);
+box-shadow: 0px 1px 0px rgba(0,0,0,0.1);
+}
+nav ul li a:hover {
+background:rgba(255,255,255,0.4);
+}
+nav ul li a:active {
+background:rgba(255,255,255,0.2);
+}
+nav ul li a.current {
+background: rgba(234,195,102,0.6);
+border: 2px solid rgba(234,195,102,1);
+text-shadow: 0px -1px 0px rgba(0,0,0,0.6);
+}
+{/Block:IfAlignNavigationWithDescription}
+
+/* Top bar and header position*/
+#header {
+border-top: 3px solid #f4ca6a;
+height:150px;
+padding:70px 0 0 0 ;
+margin-bottom:80px;
+}
+
+#insideheader {
+position:relative;
+width:630px;
+margin:0 auto;
+}
+
+/* Description*/
+#insideheader p {
+font-family: 'Open Sans', Helvetica;
+color: rgba(255,255,255,0.6);
+font-size:2.2em;
+font-weight:300;
+width:400px;
+line-height:1.2em;
+text-shadow: 0px 1px 0px rgba(0,0,0,0.1);
+}
+
+/* Posts */
+.post img {
+-webkit-border-radius:4px;
+border-radius: 4px;
+border: 6px solid rgba(255,255,255,1);
+box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+.postcontainer {
+
+margin:20px 0 20px 0px;
+}
+
+.post a{
+font-weight:500;
+color: #fff;
+padding:0px 6px 2px 4px;
+-webkit-border-radius:4px;
+border-radius: 4px;
+}
+
+.post {
+color: rgba(255,255,255,0.8);
+padding:60px 0px 40px 0px;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;font-size:18px;
+}
+
+.date {
+background:none;
+font-size:0.6em;
+font-family: 'Helvetica Neue', Helvetica;
+font-weight:700;
+text-transform: uppercase;
+letter-spacing: 6px;
+line-height:1.1;
+float:right;
+margin-top:-45px;
+margin-right:5px;
+font-weight:600;
+}
+.date a,
+.date:hover {
+color: rgba(255,255,255,0.8);
+opacity:1;
+background:none;
+font-weight:900;
+}
+.date:active {
+opacity:1;
+}
+.date span,
+.date span a,
+.date span a:hover {
+font-weight:500;
+opacity:0.6;
+}
+
+{Block:IfHideDate}
+.date{
+display:none;
+}
+{/Block:IfHideDate}
+.tags {
+width:630px;
+display:inline;
+float:left;
+margin-left:0px;
+position:relative;
+margin-top:-30px;
+}
+.tags a {
+font-size: 0.66em;
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+color:rgba(255,255,255,0.8);
+font-weight:600;
+background: rgba(255,255,255,0.1);
+-webkit-border-radius: 34px;
+border-radius: 34px;
+border-bottom: 1px solid rgba(255,255,255,0.08);
+padding: 1px 5px 0px 5px;
+color:#fff;
+text-decoration:none;
+}
+
+{Block:IfHideTags}
+.tags{
+display:none;
+}
+{/Block:IfHideTags}
+li.notes {
+margin: 0 0px 0 5px;
+display:inline;
+}
+li.notes a {
+font-size: 0.66em;
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+color:rgba(255,255,255,0.8);
+font-weight:600;
+background: rgba(255,255,255,0.1);
+-webkit-border-radius: 34px;
+border-radius: 34px;
+border-bottom: 1px solid rgba(255,255,255,0.08);
+padding: 1px 5px 1px 5px;
+color:#fff;
+text-decoration:none;
+list-style:none;
+}
+p.quote {
+position:relative;
+font-size:1.3em;
+margin:0 0 10px 0;
+background: rgba(255,255,255,0.06);
+color: #fff;
+border: 1px solid rgba(255,255,255,0.1);
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+padding:20px 20px 20px 20px;
+font-weight:300;
+}
+p.quote:after {
+content: "";
+position: absolute;
+bottom:-7px;
+left: 65px;
+border-top: 6px solid black;
+border-top-color: rgba(255,255,255,0.13);
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+}
+
+.chat {
+margin:0 0 10px 0;
+}
+.chat td {
+padding:5px 8px;
+}
+.chat td.label {
+text-align:right;
+font-weight:bold;
+}
+
+.chat tr.odd td {
+background: rgba(255,255,255,0.05);
+margin-bottom:10px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+color: rgba(255,255,255,0.7);
+border: 1px solid rgba(255,255,255,0.08);
+}
+.chat tr.even td {
+background: rgba(255,255,255,0.13);
+-webkit-border-radius: 3px;
+border-radius: 3px;
+color: rgba(255,255,255,1);
+border: 1px solid rgba(255,255,255,0.08);
+}
+.audio {
+width:630px;
+border:2px solid rgba(255,255,255,0.2);
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+background: rgba(255,255,255,0.1);
+}
+.audioplay {
+width:210px;
+height:35px;
+float:left;
+margin:5px;
+padding:30px 15px 15px 15px;
+border:1px solid rgba(255,255,255,0.2);
+border-radius:2px;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+background:rgba(255,255,255,0.4);
+}
+.audioplaycount {
+width:150px;
+float:right;
+text-align:center;
+margin-right:20px;
+padding:18px 0;
+font-size:1.2em;
+color: #fff;
+}
+.footer {
+color:#cecece;
+display:block;
+clear:both;
+font-size:1em;
+font-weight:bold;
+}
+
+.footer a {
+position:relative;
+margin-top:70px;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+text-decoration:none;
+font-family:'Helvetica Neue', Helvetica, Arial;
+font-weight:700;
+font-size:1em;
+color: #fff;
+-webkit-font-smoothing: antialiased;
+padding:0px 12px;
+background: rgba(0,0,0,0.4);
+border: 2px solid rgba(255,255,255,0.7);
+text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+-webkit-border-radius: 44px;
+border-radius: 44px;
+}
+.footer a:hover {
+opacity:0.7;
+}
+.footer a:active {
+opacity:1;
+}
+
+.footer a.left {
+padding-left:17px;
+float:left;
+}
+.footer a.left:before {
+content: "";
+position: absolute;
+top: 11px;
+left: 4px;
+width: 0;
+height: 0;
+border-color: transparent #fff transparent  transparent;
+border-style: solid;
+border-width: 4px;
+}
+.footer a.right:after {
+content: "";
+position: absolute;
+top: 11px;
+right: 4px;
+width: 0;
+height: 0;
+border-color: transparent transparent transparent  #fff;
+border-style: solid;
+border-width: 4px;
+}
+.footer a.right {
+float:right;
+padding-right:18px;
+}
+.clear {
+clear:both;
+}
+
+ol.notes {
+margin-left:0;
+padding-left:0;
+margin-bottom:100px;
+}
+ol.notes,
+ol.notes li {
+list-style-type:none;
+
+}
+ol.notes li a{
+color:#fff;
+opacity:1;
+font-weight:600;
+}
+ol.notes li.note {
+padding:3px;
+font-size:0.9em;
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.2);
+-webkit-border-radius:3px;
+border-radius: 3px;
+margin-top:5px;
+}
+ol.notes li.note img.avatar {
+vertical-align:-8px;
+margin-right:5px;
+width:16px;
+height:16px;
+padding: 2px 2px 2px 4px;
+}
+ol.notes li.note blockquote a {
+text-decoration:none;
+color:#fff;
+}
+
+{Block:IfHideNotes}
+li.notes {
+display:none;
+}
+ol.notes {
+display:none;
+}
+{/Block:IfHideNotes}
+
+
+[class^="icon-"],
+[class*=" icon-"] {
+display: inline-block;
+width: 14px;
+height: 14px;
+*margin-right: .3em;
+line-height: 14px;
+vertical-align: text-top;
+background-position: 14px 14px;
+background-repeat: no-repeat;
+margin-top: 1px;
+}
+/* White icons with optional class, or on hover/active states of certain elements */
+.icon-white,
+.nav > .active > a > [class^="icon-"],
+.nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"] {
+background-image: url("http://static.tumblr.com/nlywmlg/259m9rluw/glyphicons-halflings-white.png");
+}
+.icon-search {
+background-position: -48px 0;
+}
+.icon-heart {
+background-position: -96px 0;
+margin-right:2px;
+
+}
+.icon-home {
+background-position: 0 -24px;
+margin-top:2px;
+}
+.icon-tag {
+background-position: 0 -48px;
+}
+.icon-tags {
+background-position: -25px -48px;
+margin-top:2px;
+}
+
+.icon-comment {
+background-position: -240px -120px;
+}
+iframe#tumblr_controls {
+top: 0% !important;
+right:0% !important;
+position: fixed !important;
+}
+.imagepost img{
+width:96%;
+margin-left:-5px;
+}
+
+#socialbar{
+margin: 0 auto;
+margin-top:-16px;
+width:100%;
+display:none;
+background: rgba(244,202,106,0.7);
+background:rgba(0,0,0,0.2);
+height:80px;
+}
+
+#socialbar ul{
+padding-top:32px;
+width:630px;
+margin: 0 auto;
+}
+
+#socialbar ul li{
+list-style:none;
+float:left;
+margin-right:30px;
+margin-left:-10px;
+}
+
+.socico {
+display: inline-block;
+ background-image: url('http://static.tumblr.com/nlywmlg/FPcmbo1z8/clarus_circular.png');   
+ width:32px;
+ height:32px;
+ vertical-align:middle;
+ background-position: 0px 0px;
+ background-repeat: no-repeat;
+
+}    
+.twitter{
+    background-position: 0 0;
+} 
+.facebook{
+    background-position: -32px 0;
+} 
+ .dribbble{
+    background-position: -64px 0;
+}
+ .flickr{
+    background-position: -96px 0;
+} 
+ .skype{
+    background-position: -128px 0;
+} 
+ .youtube{
+    background-position: -160px 0;
+} 
+ .github{
+    background-position: -192px 0;
+} 
+ .vimeo{
+    background-position: -224px 0;
+} 
+ .deviantart{
+    background-position: -256px 0;
+} 
+ .behance{
+    background-position: -288px 0;
+} 
+.socialbutton{
+display:block;
+position:absolute;
+top:-131px;
+left:0px;
+background: rgba(244,202,106,0.6);
+font-weight:900;
+padding: 2px 5px 0px 5px;
+border-radius: 0px 0px 8px 8px;
+-webkit-border-radius: 0px 0px 8px 8px;
+border: 3px solid #f4ca6a;
+}
+.socialbutton a{
+text-shadow:0px -1px 0px rgba(0,0,0,0.4);
+color:#fff;
+}
+.show_hide {
+display:none;
+}
+
+{Block:IfHideColoredTopBar}
+#header {
+border-top:none;
+}
+#socialbar{
+border-bottom:2px solid rgba(0,0,0,0.3);
+}
+.socialbutton{
+
+background: rgba(0,0,0,0.4);
+padding: 5px 8px 0px 8px;
+border:none;
+margin-top:3px;
+}
+
+{/Block:IfHideColoredTopBar}
+{block:ifHideSocialButton}
+.socialbutton{
+display:none;
+}
+#socialbar{
+display:none;
+}
+{/block:ifHideSocialButton}
+
+{Block:IfSmallerNavForPages}
+.socialbutton{
+top:-121px;
+}
+
+nav ul li a.ask{
+display:inline;
+}
+nav ul li a.submit{
+display:inline;
+}
+#header{
+margin-bottom:40px;
+}
+
+nav ul{
+margin-top:-42px;
+}
+nav ul li {
+margin-left:8px;
+float:left;
+display:inline;
+}
+nav ul li a {
+font-size:0.8em;
+padding:3px 7px;
+}
+#insideheader p{
+float:left;
+width:500px;
+margin-top:10px;
+margin-bottom:20px;
+}
+{/Block:IfSmallerNavForPages}
+
+.comments{
+display:inline;
+}
+.comments i{
+margin-top:2px;
+margin-right:4px;
+margin-left:5px;
+}
+
+#disqus_thread {
+background: rgba(255,255,255,0.06);
+color:#fff;
+border: 1px solid rgba(255,255,255,0.1);
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+width:93%;
+margin: 0 auto;
+font-weight:300;
+
+display: block;
+float: left;
+
+padding:20px;
+clear: both;
+margin-top:20px;
+}
+
+#disqus_thread a {
+color: #fff;
+}
+
+a.dsq-brlink{
+color: #fff;
+opacity:1;
+border:none;
+}
+
+span.logo-disqus{
+color: #fff;
+opacity:1;
+}
+
+.hidestatic {
+display: none;
+}          
+
+.asker{
+font-size:13px;
+color:rgba(255,255,255,0.8);
+margin-bottom:-15px;
+display:inline-block;
+}
+.asker a{
+font-weight:600;
+}
+.asker span{
+text-transform:lowercase;
+font-weight:500;
+color:rgba(255,255,255,0.6);
+margin-left:-5px;
+}
+.question {
+position:relative;
+font-size:1.3em;
+margin:10px 0 10px 0;
+background: rgba(255,255,255,0.06);
+color: #fff;
+border: 1px solid rgba(255,255,255,0.1);
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+padding:20px 20px 20px 20px;
+font-weight:300;
+display:block;
+clear:both;
+}
+.question:after {
+content: "";
+position: absolute;
+top:-7px;
+left: 65px;
+border-bottom: 6px solid black;
+border-bottom-color: rgba(255,255,255,0.13);
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+}
+.questioncontainer{
+margin-bottom:15px;
+margin-top:-50px;
+}
+
+{CustomCSS}
+
+</style>
+{block:ifGoogleAnalyticsID}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+{/block:ifGoogleAnalyticsID}
+</head>
+
+<body>
+<div id="container"> <!--used for background texture-->
+<div id="backgroundgradient"></div>
+
+<div id="socialbar"><ul>
+{block:ifTwitter}
+<li><a href="http://www.twitter.com/{text:Twitter}"><span class="socico twitter"></span></a></li>
+{/block:ifTwitter}
+{block:ifFacebook}
+<li><a href="http://www.facebook.com/{text:Facebook}"><span class="socico facebook"></span></a></li>
+{/block:ifFacebook}
+{block:ifDribbble}
+<li><a href="http://www.dribbble.com/{text:Dribbble}"><span class="socico dribbble"></span></a></li>
+{/block:ifDribbble}
+{block:ifFlickr}
+<li><a href="http://www.flickr.com/photos/{text:Flickr}"><span class="socico flickr"></span></a></li>
+{/block:ifFlickr}
+{block:ifYouTube}
+<li><a href="http://www.youtube.com/{text:Youtube}"><span class="socico youtube"></span></a></li>
+{/block:ifYouTube}
+{block:ifSkype}
+<li><a href="skype:{text:Skype}?userinfo"><span class="socico skype"></span></a></li>
+{/block:ifSkype}
+{block:ifDeviantArt}
+<li><a href="http://{text:Deviantart}.deviantart.com"><span class="socico deviantart"></span></a></li>
+{/block:ifDeviantArt}
+{block:ifVimeo}
+<li><a href="http://www.vimeo.com/{text:Vimeo}"><span class="socico vimeo"></span></a></li>
+{/block:ifVimeo}
+{block:ifBehance}
+<li><a href="http://www.behance.net/{text:Behance}"><span class="socico behance"></span></a></li>
+{/block:ifBehance}
+{block:ifGithub}
+<li><a href="http://github.com/{text:Github}"><span class="socico github"></span></a></li>
+{/block:ifGithub}
+<ul></div>
+
+{Block:IfHideTags}
+<div id='header'>
+<h1><a href='/'>{Title}</a></h1>
+<div id='insideheader'>
+<div class="socialbutton"><a class="show_hide" href="#">Social</a></div>
+
+
+<nav>
+<ul>
+<li><a class="current"href="/">Home</a></li>
+<li><a href="{RSS}">RSS</a></li>
+<li><a href="/archive">Archive</a></li>
+{block:AskEnabled}
+<li><a class="ask" href="/ask">Ask</a></li>
+{/block:AskEnabled}
+{block:SubmissionsEnabled}
+<li><a class="submit" href="/submit">Submit</a></li>
+{/block:SubmissionsEnabled}
+{block:HasPages}
+{block:Pages}
+<li class="page"><a href="{URL}">{Label}</a></li>
+{/block:Pages}
+{/block:HasPages}
+</ul>
+</nav>
+
+{block:Description}
+<p>{Description}</p>
+{/block:Description}
+
+{/Block:IfHideTags}
+
+</div> <!-- insideheader -->
+</div> <!-- header -->
+
+<div id='wrapper'>
+<div id='posts'>
+{block:Posts}
+    <div class='postcontainer'>
+    <div class='post'>
+    {block:Text}
+        {block:Title}
+            <h3>{Title}</h3>
+        {/block:Title}
+    {/block:Text}
+    <div class='date'>
+    <a href='{Permalink}'>
+    {ShortMonth} {DayOfMonth} &middot; <span>  {Year}</span>
+    </a>
+    </div> <!--date-->
+    {Body}
+
+    {block:Answer}      
+        <div class="questioncontainer">
+        <div class="asker"> {Asker} <span> Asked: </span></div> 
+        <div class="question"> {Question}</div></div>
+        {Answer}
+    {/block:Answer}
+
+    {block:Photo}
+        <div class="imagepost">
+        {LinkOpenTag}<img src='{PhotoURL-500}' alt='{PhotoAlt}'/>{LinkCloseTag}
+        </div>
+        {block:Caption}
+            <p>{Caption}</p>
+        {/block:Caption}
+    {/block:Photo}
+
+    {block:Photoset}
+        {Photoset-500}
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+    {/block:Photoset}
+
+    {block:Quote}
+        <p class='quote'>"{Quote}"</p>
+        {block:Source}
+        <p>{Source}</p>
+        {/block:Source}
+    {/block:Quote}
+
+    {block:Link}
+        <p>
+        <a href='{URL}' class='link' {Target}>{Name}</a>
+        {block:Description}
+            <p>{Description}</p>
+        {/block:Description}
+        </p>
+    {/block:Link}
+
+    {block:Chat}
+        {block:Title}
+          <h3>{Title}</h3>
+        {/block:Title}
+        <table cellpadding='0' cellspacing='10px' width='100%' border='0' class='chat'>
+        {block:Lines}
+            <tr class='{Alt}'>
+            {block:Label}
+                <td class='label'>{Label}</td>
+            {/block:Label}
+            <td>{Line}</td>
+            </tr>
+        {/block:Lines}
+        </table>
+    {/block:Chat}
+
+    {block:Audio}
+        <div class='audio'>
+        <div class='audioplay'>
+        {AudioPlayerWhite}
+        </div>
+        <div class='audioplaycount'>
+        {FormattedPlayCount} Plays
+        </div>
+        <br class='clear' />
+        </div>
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+    {/block:Audio}
+
+    {block:Video}
+        {Video-500}
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+    {/block:Video}
+
+    </div>
+    <div class='tags'>
+    {block:HasTags}
+        <i class="icon-tags icon-white"></i>
+        {block:Tags}
+        <a href='{TagURL relative="true" foo="bar"}'>{Tag}</a>
+        {/block:Tags}
+    {/block:HasTags}
+
+    {block:NoteCount}<li class="notes"><i class="icon-heart icon-white"> <a href="{Permalink}#notes"> </i>{NoteCount}</a></li>{/block:NoteCount}
+
+    {block:IfDisqusAccount}
+        {block:IfNotInfiniteScroll}
+        <div class="comments"><i class="icon-comment icon-white"></i><a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></div>
+        {/block:IfNotInfiniteScroll}
+    {/block:IfDisqusAccount}
+
+    {block:IfDisqusAccount}
+        <div class="hidestatic{PostID}">
+        {block:PermalinkPage} <div id="disqus_thread"></div>{/block:PermalinkPage}
+        </div>
+    {/block:IfDisqusAccount}
+
+    </div>
+    </div>
+
+    {block:IfDisqusAccount}
+    <script type="text/javascript">
+    var disqus_shortname = '{text:Disqus Account}'; 
+    (function() {
+    var dsq = document.createElement('script'); 
+    dsq.type = 'text/javascript'; 
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://{text:Disqus Account}.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {/block:IfDisqusAccount}    
+
+    {block:PostNotes}
+        <div class='postcontainer'>
+        {block:Posts}
+        {PostNotes}
+        {/block:Posts}
+        </div>
+    {/block:PostNotes}
+
+{/block:Posts}
+
+<div class='footer'>
+{block:NextPage}
+    <a class="left" href='{NextPage}'> {lang:Older choice="en"}</a>
+{/block:NextPage}
+
+{block:PreviousPage}
+        <a class="right"href='{PreviousPage}'>{lang:Newer}</a>
+{/block:PreviousPage}
+</div>
+</div>
+</div>
+<br class='clear' />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("#socialbar").hide();
+$(".show_hide").show();
+
+$('.show_hide').click(function(){
+$("#socialbar").slideToggle();
+});
+
+});
+</script>
+{block:IfInfiniteScroll}
+<script src="http://static.tumblr.com/nlywmlg/Wokmayhq7/jquery.infinitescroll.js"></script>
+<script>
+$('#wrapper').infinitescroll({
+navSelector      : ".footer",
+nextSelector 	: ".footer a",
+itemSelector 	: ".postcontainer",    
+animate:true,
+});
+</script>
+{/block:IfInfiniteScroll}
+</body>
+</html>
