@@ -1,28 +1,55 @@
 import sys
 import argparse
 from glob import glob
+from multiprocessing import Process, Pipe, Queue
+from dialog.TTIntroDialog import TTIntroDialog
+import wx
+import time
+import webbrowser
 
 import server
 
-argp = argparse.ArgumentParser()
-argp.add_argument( '--path', default=None )
-argp.add_argument( '--port', default=8080 )
-argp.add_argument( '--mode', default='gui')
-args = argp.parse_args( sys.argv[1:] )
-
-
-# gui.init(args)
-# server.init(args)
-
 print "ARGS", __file__
 
-if args.mode == 'gui':
-	import wx
-	import gui
-	gui.set_server(__file__)
-	gui.start()
-elif args.path and args.port:
-	server.init( args )
-	server.start( path=args.path, port=args.port )
+gui_proc = Process()
+srv_proc = None
 
-sys.argv.extend(['--path','/Users/kalyan/Dropbox/Projects/Labs/tumblrtemplatr/projects'])
+path = None
+
+def start_server():
+	#server.init( args )
+	server.start()
+	pass
+
+def on_start( path, port ):
+	global srv_proc
+	print "ON_START(%s:%s)" % (path,port)
+	if path:
+		print "ON_START -> TRYING"
+		srv_proc = Process( target=server.start,args=(path,port) )
+		srv_proc.start()
+		time.sleep(1)
+		webbrowser.open( "http://localhost:%s" %(port) )
+		return True
+	print "ON_START -> :("
+	return False
+
+def on_end():
+	global srv_proc
+	if srv_proc:
+		print "ON_END -> trying"
+		srv_proc.terminate()
+		srv_proc = None
+		return True
+
+def gui_start():
+	app = wx.App()
+	dialog = TTIntroDialog( on_start = on_start, on_end = on_end )
+	print 'showing dialog'
+	dialog.Show()
+	app.MainLoop()
+
+
+gui_start()
+
+#sys.argv.extend(['--path','/Users/kalyan/Dropbox/Projects/Labs/tumblrtemplatr/projects'])
