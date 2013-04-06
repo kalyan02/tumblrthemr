@@ -14,8 +14,8 @@ DATA_FILES = [
 	('data',glob("data/*") )
 ]
 OPTIONS = {
-	'argv_emulation': True,
-	'includes':[ 'bottle', 'wx', 'bottle' ],
+	'argv_emulation': False,
+	'includes':[ 'bottle' ],
 	'packages':[ 'dialog' ]
 }
 

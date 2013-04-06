@@ -86,7 +86,7 @@ def render_page(project,**kwargs):
 			# Serve it from the theme's directory
 			return bottle.static_file(file_path,theme_directory)
 	else:
-		return render_404()
+		return '404 - %s | %s | %s' % (the_path,theme_directory,project) #+ render_404()
 
 def start( path=PROJECTS_DIRECTORY, port=8080 ):
 	bottle.debug()
