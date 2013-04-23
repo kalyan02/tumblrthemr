@@ -13,7 +13,7 @@ class TTIntroDialog(BaseDialog):
 
 	def select_path(self, event):
 		print "Got something"
-		print event
+		print event	
 		print event.Path
 
 		if not self.server_started:
@@ -32,7 +32,8 @@ class TTIntroDialog(BaseDialog):
 						raise
 				else:
 					raise
-			except:
+			except Exception, e:
+				print e
 				self._end_server_start(is_success=False,message='Invalid root directory')
 
 

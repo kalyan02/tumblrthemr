@@ -89,6 +89,7 @@ def render_page(project,**kwargs):
 		return '404 - %s | %s | %s' % (the_path,theme_directory,project) #+ render_404()
 
 def start( path=PROJECTS_DIRECTORY, port=8080 ):
+	print "DO START (%s,%s)" % (path,port);
 	bottle.debug()
 	bottle.run( app, host='localhost', port=port, reloader=False )
 

@@ -23,13 +23,17 @@ def start_server():
 
 def on_start( path, port ):
 	global srv_proc
-	print "ON_START(%s:%s)" % (path,port)
+	#print "ON_START(%s:%s)" % (path,port)
 	if path:
-		print "ON_START -> TRYING -> %s" % path
-		srv_proc = Process( target=server.start,args=(path,port) )
-		srv_proc.start()
-		time.sleep(1)
-		webbrowser.open( "http://localhost:%s" %(port) )
+		#print "ON_START -> TRYING -> %s" % path
+		try:
+			srv_proc = Process( target=server.start,args=(path,port) )
+			srv_proc.start()
+			time.sleep(1)
+			webbrowser.open( "http://localhost:%s" %(port) )
+		except Exception, e:
+			print e.message
+
 		return True
 	print "ON_START -> :("
 	return False
