@@ -8,15 +8,16 @@ Usage:
 from setuptools import setup
 from glob import glob
 
-APP = ['main.py']
+APP_NAME = 'tumblrtemplatr'
+APP = ['src/main.py']
 DATA_FILES = [ 
-	('dialog',['dialog/bg.bmp']),
-	('data',glob("data/*") )
+	('dialog',['src/dialog/bg.bmp']),
+	('data',glob("src/data/*") )
 ]
 OPTIONS = {
 	'argv_emulation': False,
 	'includes':[ 'bottle' ],
-	'packages':[ 'dialog' ]
+	'packages':[ 'dialog' ],
 }
 
 setup(
@@ -24,4 +25,5 @@ setup(
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
+	package_dir = {'':'src/'}
 )
