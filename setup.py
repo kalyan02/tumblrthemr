@@ -5,10 +5,12 @@ Usage:
     python setup.py py2app
 """
 
+# now import setuptools so it uses the monkeypatched methods
+# Lets get things rolling
 from setuptools import setup
 from glob import glob
 
-APP_NAME = 'tumblrtemplatr'
+APP_NAME = 'TumblrTemplatr'
 APP = ['src/main.py']
 DATA_FILES = [ 
 	('dialog',['src/dialog/bg.bmp']),
@@ -18,10 +20,12 @@ OPTIONS = {
 	'argv_emulation': False,
 	'includes':[ 'bottle' ],
 	'packages':[ 'dialog' ],
+	'iconfile':'resources/Icon.icns'
 }
 
 setup(
     app=APP,
+    name = APP_NAME,
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
