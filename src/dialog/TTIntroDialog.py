@@ -34,13 +34,17 @@ class TTIntroDialog(BaseDialog):
 					raise
 			except Exception, e:
 				print e
-				self._end_server_start(is_success=False,message='Invalid root directory')
+				self._end_server_start(is_success=False,message='Please select your themes directory')
 
 
 	def exit_server(self,event):
 		#self.__do_exit();
 		self.__do_end()
 		sys.exit(-1)
+
+	def set_build_info(self,bversion):
+		self.build_info.SetForegroundColour((180,180,180))
+		self.build_info.SetLabelText(bversion)
 
 
 	def _begin_server_start(self):
@@ -54,9 +58,6 @@ class TTIntroDialog(BaseDialog):
 			return True
 
 		return False
-
-
-
 
 	def _end_server_start(self, is_success=True, server_location='localhost:8080',message='Server Start Failed'):
 		if is_success:
@@ -111,8 +112,4 @@ class TTIntroDialog(BaseDialog):
 			return self.on_exit()
 
 		return False		
-
-
-
-
 

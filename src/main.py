@@ -8,6 +8,7 @@ import time
 import webbrowser
 
 import server
+import conf
 
 print "ARGS", __file__
 
@@ -49,6 +50,7 @@ def on_end():
 def gui_start():
 	app = wx.App()
 	dialog = TTIntroDialog( on_start = on_start, on_end = on_end )
+	dialog.set_build_info(conf.build_version)
 	print 'showing dialog'
 	dialog.Show()
 	app.MainLoop()
