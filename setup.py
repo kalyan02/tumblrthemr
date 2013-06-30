@@ -10,7 +10,7 @@ Usage:
 from setuptools import setup
 from glob import glob
 
-APP_NAME = 'Tumblr Themr'
+APP_NAME = 'TumblrThemr'
 APP = ['src/main.py']
 DATA_FILES = [ 
 	('dialog',['src/dialog/bg.bmp']),
