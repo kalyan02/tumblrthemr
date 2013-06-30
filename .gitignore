@@ -2,3 +2,5 @@
 build
 dist
 .DS_Store
+tt.sublime-project
+tt.sublime-workspace
