@@ -14,11 +14,12 @@ APP_NAME = 'TumblrThemr'
 APP = ['src/main.py']
 DATA_FILES = [ 
 	('dialog',['src/dialog/bg.bmp']),
-	('data',glob("src/data/*") )
+	('data',glob("src/data/*")),
+	('templates',glob('src/templates/*'))
 ]
 OPTIONS = {
 	'argv_emulation': False,
-	'includes':[ 'bottle' ],
+	'includes':[ 'bottle', 'jinja2' ],
 	'packages':[ 'dialog' ],
 	'iconfile':'resources/Icon.icns'
 }

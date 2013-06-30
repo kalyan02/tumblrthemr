@@ -15,11 +15,14 @@ import errno
 from glob import glob
 
 
-# DJANGO RELATED STUFF
-from django.conf import settings
-settings.configure(TEMPLATE_DIRS=("templates",))
-import django.template
-import django.template.loader
+# # DJANGO RELATED STUFF
+# from django.conf import settings
+# settings.configure(TEMPLATE_DIRS=("templates",))
+# import django.template
+# import django.template.loader
+
+from jinja2 import Template
+# env = Environment(loader=PackageLoader('templates',))
 
 DEFAULT_SRC = 'default'
 CURRENT_SRC = 'current_source'
@@ -45,15 +48,19 @@ def mkdir_p(path):
 		else:
 			raise
 
-def render(name, *values):
-	ctx = django.template.Context()
-	for d in values:
-		ctx.push()
-		ctx.update(d)
+def render(name, values):
+	template_content = open("templates/%s" % name, 'r').read()
+	template = Template(template_content)
+	return template.render(**values)
 
-	t = django.template.loader.get_template(name)
-	# print dir(t)
-	return str(t.render(ctx))
+	# ctx = django.template.Context()
+	# for d in values:
+	# 	ctx.push()
+	# 	ctx.update(d)
+
+	# t = django.template.loader.get_template(name)
+	# # print dir(t)
+	# return str(t.render(ctx))
 
 def __save_data():
 	global data_source, data_source_path
@@ -144,7 +151,7 @@ def home():
 	srcs_names = data_source['data'].keys()
 	src_active = current_data_source_name
 
-	ctx = django.template.Context()
+	# ctx = django.template.Context()
 
 	return render( 'index.html', {
 		# 'debug_info':'hello',
