@@ -14,15 +14,7 @@ import pickle
 import errno
 from glob import glob
 
-
-# # DJANGO RELATED STUFF
-# from django.conf import settings
-# settings.configure(TEMPLATE_DIRS=("templates",))
-# import django.template
-# import django.template.loader
-
 from jinja2 import Template
-# env = Environment(loader=PackageLoader('templates',))
 
 DEFAULT_SRC = 'default'
 CURRENT_SRC = 'current_source'
@@ -53,15 +45,7 @@ def render(name, values):
 	template = Template(template_content)
 	return template.render(**values)
 
-	# ctx = django.template.Context()
-	# for d in values:
-	# 	ctx.push()
-	# 	ctx.update(d)
-
-	# t = django.template.loader.get_template(name)
-	# # print dir(t)
-	# return str(t.render(ctx))
-
+# small util to save the data data to file!
 def __save_data():
 	global data_source, data_source_path
 	fh = open(data_source_path,'wb+')
@@ -96,14 +80,14 @@ if data_source.has_key(CURRENT_SRC):
 else:
 	current_data_source_name = DEFAULT_SRC
 
+# bad idea, but okay for now
 current_data_source = data_source['data'].get(current_data_source_name)
-
 
 shutdown_callback = None
 
+# fetches data from current active data souce and renders the theme
 def render_theme(the_path):
 	global data_source, current_data_source, current_data_source_name
-
 	current_data_source = data_source['data'][current_data_source_name]
 	s_time = time.time()
 	try:
@@ -140,6 +124,7 @@ def render_404(**kwargs):
 def render_favicon(**kwargs):
 	return None
 
+# the home!
 @app.route('/')
 def home():
 	global PROJECTS_DIRECTORY
@@ -150,8 +135,6 @@ def home():
 
 	srcs_names = data_source['data'].keys()
 	src_active = current_data_source_name
-
-	# ctx = django.template.Context()
 
 	return render( 'index.html', {
 		# 'debug_info':'hello',
