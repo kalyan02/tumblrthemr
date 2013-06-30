@@ -9,6 +9,7 @@ Themes are rendered against the default tumblr data. You can also test against y
 To run the app, follow these steps:
 
  * Run TumblrThemr.app
+![Web Interface](https://raw.github.com/kalyan02/tumblrtemplatr/master/etc/screenshot_2.png)
  * Select the directory containing your themes  
 ```
 Example directory structure  
@@ -22,7 +23,8 @@ Example directory structure
 
  * Optionally select the port (default:13323)
  * Click on 'Start Server' to start the offline tumblr server
- * A browser window with the default webpage will open
+ * A browser window with the default webpage will open  
+![Web Interface](https://raw.github.com/kalyan02/tumblrtemplatr/master/etc/screenshot_1.png)
 
 ### Preview your theme
  * From the homepage (default [http://localhost:13323](http://localhost:13323)) , you can select an available theme
