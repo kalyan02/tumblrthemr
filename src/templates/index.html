@@ -1,0 +1,131 @@
+<html>
+<head>
+	<title>Tumblr Themr</title>
+	<style type="text/css">
+	body {
+		font:12px verdana;
+		font-weight: 100;
+		margin:0;
+		padding:0;
+	}
+	#titlebar {
+		background: #1ea721;
+		padding:10px;
+
+	}
+	#content {
+		padding:10px;
+		padding-left: 20px;
+	}
+	#titlebar h1 { 
+		color:#fff;
+		font-weight: normal;
+		font-size: 21px;
+	}
+	#titlebar span {
+		font-size: 14px;
+		font-weight: normal; 
+		margin-left: 15px;
+	}
+	a {
+		color:#1ea721;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	#titlebar a {
+		color: #fff;
+		font-weight: normal; 
+		padding: 5px;
+		border: 1px solid #fff;
+		text-decoration: none;
+	}
+	#titlebar a:hover {
+		background: #fff;
+		color: #1ea721;
+	}
+
+	#content a {
+		padding:2px;
+		margin:2px;
+	}
+	#content ul li {
+		margin: 6px 0;
+	}
+	a.active {
+		background:#1ea721;
+		color:#fff;
+	}
+
+	fieldset legend {
+		font-size: 16px;
+	}
+	tr td {
+		font-size: 12px;
+	}
+
+	fieldset {
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+	}
+	.tright {
+		float: right;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="titlebar">
+		<h1>Tumblr-Themr
+			<span>
+				<a href='/'>Fork on Github</a>
+				<!-- <a href='/shutdown' class='tright'>Quit</a> -->
+			</span>
+		</h1>
+	</div>
+
+	<div id="content">
+		<div id="left">
+			{% if debug_info %}
+				<fieldset>
+				<legend>Debug</legend>
+					{{debug_info}}
+				</fieldset>
+			{% endif %}
+
+			<fieldset>
+			<legend>Select Project</legend>
+			<ul>
+				{% for each in projects %}
+				<li><a href='{{ each }}'>{{ each }}</a></li>
+				{% endfor %}
+			</ul>
+			</fieldset>
+
+			<fieldset>
+			<legend>Select Data Source( current : {{active_src}} )</legend>
+			<ul>
+				{% for each in sources %}
+				<li><a href='/api/select_source/{{ each }}'  {% if each == active_src %} class='active' {% endif %}>{{ each }}</a></li>
+				{% endfor %}
+			</ul>
+			</fieldset>
+
+			<fieldset>
+			<legend>Import Data Source</legend>
+			<form action="/api/import_source" method='post'>
+				<table>
+					<tr><td>Tumblr API Key </td><td><input type="text" name="api_key" value="{{api_key}}" /></td></tr>
+					<tr><td>Import from url </td><td><input type="text" name="blog_uname" />.tumblr.com</td></tr>
+					<tr><td><input type="submit" name="import" value="Import" /></td></tr>
+				</table>
+			</form>
+			</fieldset>
+
+		</div>
+		<div id="right">
+		</div>
+	</div>
+</body>
+
+</html>

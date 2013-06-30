@@ -17,10 +17,22 @@ srv_proc = None
 
 path = None
 
+
 def start_server():
 	#server.init( args )
 	server.start()
 	pass
+
+def on_end():
+	global srv_proc
+	if srv_proc:
+		print "ON_END -> trying"
+		srv_proc.terminate()
+		srv_proc = None
+		return True
+def shutdown():
+	on_end()
+	sys.exit(-1)
 
 def on_start( path, port ):
 	global srv_proc
@@ -38,14 +50,6 @@ def on_start( path, port ):
 		return True
 	print "ON_START -> :("
 	return False
-
-def on_end():
-	global srv_proc
-	if srv_proc:
-		print "ON_END -> trying"
-		srv_proc.terminate()
-		srv_proc = None
-		return True
 
 def gui_start():
 	app = wx.App()
