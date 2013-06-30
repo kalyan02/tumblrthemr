@@ -147,7 +147,7 @@ def home():
 	ctx = django.template.Context()
 
 	return render( 'index.html', {
-		'debug_info':'hello',
+		# 'debug_info':'hello',
 		'projects':prjs_names, 
 		'sources':srcs_names, 
 		'active_src':current_data_source_name,
@@ -164,6 +164,20 @@ def select_source(source_name,**kwargs):
 
 	bottle.redirect('/')
 	pass
+
+@app.route('/api/remove_source/<source_name>')
+def remove_source(source_name,**kwargs):
+	global data_source, current_data_source, current_data_source_name
+
+	del data_source['data'][source_name]
+	# if we are deleting active source, switch back to default one
+	if current_data_source_name == source_name:
+		data_source[CURRENT_SRC] = current_data_source_name = DEFAULT_SRC
+		current_data_source = data_source['data'][current_data_source_name]
+
+	__save_data()
+
+	bottle.redirect('/')
 
 # lets you import json blog data from tumblr if you have an api key
 @app.route('/api/import_source',method='POST')

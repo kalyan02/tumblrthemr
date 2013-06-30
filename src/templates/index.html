@@ -71,6 +71,9 @@
 	.tright {
 		float: right;
 	}
+	#content li a.opt {
+		margin:0;padding:0;
+	}
 	</style>
 </head>
 
@@ -97,7 +100,7 @@
 			<legend>Select Project</legend>
 			<ul>
 				{% for each in projects %}
-				<li><a href='{{ each }}'>{{ each }}</a></li>
+				<li><a target="_blank" href='{{ each }}'>{{ each }}</a></li>
 				{% endfor %}
 			</ul>
 			</fieldset>
@@ -106,7 +109,12 @@
 			<legend>Select Data Source( current : {{active_src}} )</legend>
 			<ul>
 				{% for each in sources %}
-				<li><a href='/api/select_source/{{ each }}'  {% if each == active_src %} class='active' {% endif %}>{{ each }}</a></li>
+				<li>
+						<a href='/api/select_source/{{ each }}'  {% if each == active_src %} class='active' {% endif %}>{{ each }}</a>
+						{% if each != 'default' %}
+							(<a class='opt' href='/api/remove_source/{{ each }}'>remove</a>)
+						{% endif %}
+				</li>
 				{% endfor %}
 			</ul>
 			</fieldset>
