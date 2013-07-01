@@ -8,9 +8,9 @@ The project initially started as an exercise in writing a complete parser from s
 
 ### Download
 
-[http://tumblrthemr.com/TumblrThemr.zip](http://tumblrthemr.com/TumblrThemr.zip) (OSX Only)
+[http://tumblrthemr.com/TumblrThemr.zip](http://tumblrthemr.com/TumblrThemr.zip) (OSX)
 
-For windows & linux - unfortunately a standalone build is not available at this point.  But you can still use this tool.
+For Windows & Linux - unfortunately a standalone build is not available at this point.  But you can still use this tool.
 
  * Install the [pre-requisits](https://github.com/kalyan02/tumblrthemr#pre-requisits)
  * checkout out this repository
