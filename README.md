@@ -4,7 +4,7 @@ TumblrThemr is a standalone tool to develop tumblr themes offline on your mac! I
 
 Themes are rendered against the default tumblr data. You can also test against your own tumble blog, for that you will need to import your tumble blog's data , from Tumblr Themr itself, using your Tumblr developer API Key.
 
-The project initially started as an exercise in writing a complete parser from scratch; building desktop gui app; desktop web app and eventually evolved into a complete app. Its entirely written in Python.
+The project initially started as an exercise in writing a complete parser from scratch; building desktop gui app; desktop web app and eventually evolving into a complete app and is written in Python.
 
 ### Download
 
