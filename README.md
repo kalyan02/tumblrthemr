@@ -8,13 +8,15 @@ Themes are rendered against the default tumblr data. You can also test against y
 
 [http://tumblrthemr.com/TumblrThemr.zip](http://tumblrthemr.com/TumblrThemr.zip)
 
-## Getting started
+### Getting started
 
 To run the app, follow these steps:
 
- * Run TumblrThemr.app
+ * Run TumblrThemr.app  
 ![Web Interface](https://raw.github.com/kalyan02/tumblrtemplatr/master/etc/screenshot_2.png)
+
  * Select the directory containing your themes  
+
 ```
 Example directory structure  
 /projects                 <-- *you need to pick this*
@@ -63,10 +65,11 @@ To build the app from source you will require the following
  * Implement full tumblr spec
  * Add support for windows / py2exe
 
-## Contributors
-If you would like to contribute, please send a pull request and add your name to this section.
+## Contribution
+The full tumblr spec hasn't been implemented yet. If you would like to contribute,
+please send a pull request and add your name to this section along with your commit.
 
-* kalyan
+* [kalyan02](http://twitter.com/kalyan02)
 
 ## License
 This free software is released under [MIT License](http://opensource.org/licenses/MIT)
