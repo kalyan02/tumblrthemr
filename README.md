@@ -1,6 +1,6 @@
 ## Tumblr Themr
 
-TumblrThemr is a standalone tool to develop tumblr themes offline on your mac! It lets you get rid of the painful process of copy pasting your theme onto tumblr's interface to preview it and lets you use your favorite editor for development.
+TumblrThemr is a standalone tool to develop tumblr themes offline on your desktop (osx/win/linux)! It lets you get rid of the painful process of copy pasting your theme onto tumblr's interface to preview it and lets you use your favorite editor for development.
 
 Themes are rendered against the default tumblr data. You can also test against your own tumble blog, for that you will need to import your tumble blog's data , from Tumblr Themr itself, using your Tumblr developer API Key.
 
@@ -9,6 +9,12 @@ The project initially started as an exercise in writing a complete parser from s
 ### Download
 
 [http://tumblrthemr.com/TumblrThemr.zip](http://tumblrthemr.com/TumblrThemr.zip) (OSX Only)
+
+For windows & linux - unfortunately a standalone build is not available at this point.  But you can still use this tool.
+
+ * Install the [pre-requisits](https://github.com/kalyan02/tumblrthemr#pre-requisits)
+ * checkout out this repository
+ * execute the main.py python script ( python main.py )
 
 ### Getting started
 
