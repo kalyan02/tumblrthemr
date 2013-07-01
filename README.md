@@ -6,7 +6,7 @@ Themes are rendered against the default tumblr data. You can also test against y
 
 ### Download
 
-[zip](http://tumblrthemr.com/TumblrThemr.zip), dmg (coming soon)
+[http://tumblrthemr.com/TumblrThemr.zip](http://tumblrthemr.com/TumblrThemr.zip)
 
 ## Getting started
 
