@@ -77,10 +77,43 @@ To build the app from source you will require the following
 If you would like to contribute, please send a pull request and add your name to this section along with your commit.
 Am currently looking for help mainly in these areas:
  * Complete the tumblr spec - its only partially implemented to cover major aspects
- * A port to windows exe using py2exe.
- * Improvements the parser/etc.
+ * A port to windows exe using py2exe
+ * Improvements the parser/etc
 
 * [kalyan02](http://twitter.com/kalyan02)
+
+### Implementing the tumblr tags / spec
+
+The tags are implemented by simply mapping them to the data fields that correspond to the JSON API output from tumblr.
+Entire spec is simply one data structure called `contextDataMapper` - [https://github.com/kalyan02/tumblrthemr/blob/master/src/engine.py#L502](https://github.com/kalyan02/tumblrthemr/blob/master/src/engine.py#L502)
+
+Each key in the contextDataMapper corresponds to the actual tag, the value corresponds to a lambda function which will perform the retrieval from json
+
+Eg1:
+
+`'title' : _path('blog.title')`  
+`_path ` returns a method which retrieves `json['data']['blog']['title']` from the json.
+
+Eg2:
+
+`'dayofmonth': _date('e')`  
+`_date` returns a method that performs `dparser.parse( node['data']['date'] ).strftime('%e')` on the corresponding node!
+
+Eg3:
+
+`'posts' : ('posts',{...`  
+Here 'posts' tumblr tag maps to the 'posts' section of the json data. The context mapper supports nesting, so you can add additional such conditions to map the entire json to tags.
+
+Eg4:
+```
+'audio' : ( lambda node: node['data']['type'] == 'audio', {
+  							'formattedplaycount' : 'plays',
+								'audioplayerwhite' : 'player',
+								'caption' : 'caption'
+							}),
+```  
+One can also perform conditional mapping. In the above example, a sub map for audio data is created only if the node type is audio.
+If so, then formattedplaycount, caption, audioplayerwhite variables are simply mapped to their corresponding json fields, without any processing.
 
 ## License
 This free software is released under [MIT License](http://opensource.org/licenses/MIT)
